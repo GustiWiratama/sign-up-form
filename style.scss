@@ -23,7 +23,7 @@
     .main-container {
       display: flex;
       .text-section {
-        margin-top: 5em;
+        margin-top: 3em;
         justify-content: center;
         align-items: center;
         max-width: 350px;
@@ -34,8 +34,9 @@
         }
       }
       .main-section {
+        // scale: 0.8;
         padding: 1.5em;
-        max-width: 25em;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -53,37 +54,68 @@
             font-weight: bold;
           }
         }
-        .sign-up-section {
+
+        .input-form {
           display: flex;
+          justify-content: center;
           flex-direction: column;
           background-color: white;
           border-radius: 10px;
-          .input-form {
+
+          .fn-section,
+          .ln-section,
+          .email-section,
+          .password-section {
+            // margin-bottom: -40px;
+            // width: 100%;
+            align-items: center;
+            display: flex;
+            position: relative;
             display: flex;
             flex-direction: column;
-            padding: 20px;
-            input {
-              font-weight: bold;
-              border: 1px solid var(--Grayish-blue);
-              border-radius: 5px;
-              padding: 10px;
-              margin: 10px;
+            img {
+              position: absolute;
+              left: 85%;
+              transform: translateY(62%);
+
+              width: 24px;
+              height: 24px;
+              // display: ;
             }
-            button {
-              color: white;
-              border-radius: 5px;
-              padding: 10px;
-              margin: 10px;
-              border: none;
-              background-color: var(--color-green);
-            }
-            .agreeing-section {
-              color: var(--Grayish-blue);
-              font-size: 0.8em;
-              padding: 10px;
-              span {
-                color: var(--color-red);
-              }
+          }
+
+          // flex-direction: column;
+          padding: 20px;
+          input {
+            display: flex;
+            font-weight: bold;
+            border: 1px solid var(--Grayish-blue);
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            width: 90%;
+          }
+          //
+          span {
+            text-align: end;
+            // margin-top: -40px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
+          button {
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            background-color: var(--color-green);
+          }
+          .agreeing-section {
+            color: var(--Grayish-blue);
+            font-size: 0.8em;
+            padding: 10px;
+            span {
+              color: var(--color-red);
             }
           }
         }
@@ -99,7 +131,27 @@
     align-items: center;
   }
   .text-section {
+    margin-top: 5em;
     justify-content: center;
     margin-bottom: 20px;
   }
+  // img {
+  //   transform: translateY(-4.3rem);
+  // }
+}
+
+.text-danger {
+  color: red;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.text-success {
+  color: rgb(117, 195, 0);
+  font-size: 10px;
+  font-style: italic;
+}
+
+.d-none {
+  display: none;
 }

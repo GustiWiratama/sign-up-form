@@ -42,19 +42,78 @@
             <span class="try">Try it free 7 days</span> then $20/mo. thereafter
           </button>
         </div>
-        <div class="sign-up-section">
-          <div class="input-form">
-            <input type="text" placeholder="First Name" class="" />
-            <input type="text" placeholder="Last Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="password" placeholder="Password" />
-            <button class="claim">CLAIM YOUR FREE TRIAL</button>
-            <div class="agreeing-section">
-              By clicking the button, you are agreeing to our
-              <span>Terms and Services</span>
-            </div>
+
+        <form action="" class="input-form" name="input-form">
+          <div class="fn-section">
+            <input
+              type="text"
+              id="fn"
+              placeholder="First Name"
+              class="input"
+              name="first-name"
+            />
+            <img
+              src="./images/icon-error.svg"
+              class="error1 d-none"
+              id="error1"
+              alt=""
+            />
           </div>
-        </div>
+          <span id="fn-message"></span>
+          <div class="ln-section">
+            <input
+              type="text"
+              id="ln"
+              placeholder="Last Name"
+              class="input"
+              name="last-name"
+            />
+            <img
+              src="./images/icon-error.svg"
+              class="error2 d-none"
+              id="error2"
+              alt=""
+            />
+          </div>
+          <span id="ln-message"></span>
+          <div class="email-section">
+            <input
+              type="text"
+              id="email"
+              placeholder="Email Address"
+              class="input"
+              name="email"
+            />
+            <img
+              src="./images/icon-error.svg"
+              class="error3 d-none"
+              id="error3"
+              alt=""
+            />
+          </div>
+          <span id="email-message"></span>
+          <div class="password-section">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              class="input"
+              name="password"
+            />
+            <img
+              src="./images/icon-error.svg"
+              class="error4 d-none"
+              id="error4"
+              alt=""
+            />
+          </div>
+          <span id="password-message"></span>
+          <button type="submit" class="claim">CLAIM YOUR FREE TRIAL</button>
+          <div class="agreeing-section">
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </div>
+        </form>
       </div>
     </div>
     <footer>
@@ -65,5 +124,6 @@
         >. Coded by <a href="#">Gusti Wiratama</a>.
       </p>
     </footer>
+    <script src="/index.js" defer></script>
   </body>
 </html>
