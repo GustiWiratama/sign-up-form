@@ -75,12 +75,17 @@
             flex-direction: column;
             img {
               position: absolute;
-              left: 85%;
+              left: 86%;
               transform: translateY(62%);
 
               width: 24px;
               height: 24px;
               // display: ;
+            }
+            .hide-button {
+              position: absolute;
+              left: 86%;
+              transform: translateY(62%);
             }
           }
 

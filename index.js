@@ -17,6 +17,9 @@ const imgError2 = document.querySelector("#error2");
 const imgError3 = document.querySelector("#error3");
 const imgError4 = document.querySelector("#error4");
 
+const hidePass = document.querySelector("#hide-pass");
+const showPass = document.querySelector("#show-pass");
+
 function validate() {
   if (firstNameInput.value.trim() === "") {
     fnMessage.classList.remove("text-success");
@@ -74,13 +77,38 @@ function validate() {
     passMessage.classList.add("text-danger");
     passMessage.innerHTML = "Password cannot be empty";
     imgError4.classList.remove("d-none");
+    hidePass.classList.add("d-none");
   } else {
     passMessage.classList.add("text-success");
     passMessage.classList.remove("text-danger");
     passMessage.innerHTML = "Success";
     imgError4.classList.add("d-none");
+    hidePass.classList.remove("d-none");
   }
 }
+
+// hidePass.addEventListener("click", function () {
+//   if (password.type === "password") {
+//     password.type === "text";
+//   } else {
+//     password.type === "password";
+//   }
+// });
+
+function hidePassword() {
+  if (password.type === "password") {
+    password.type = "text";
+    hidePass.classList.add("d-none");
+    showPass.classList.remove("d-none");
+  } else {
+    password.type = "password";
+    hidePass.classList.remove("d-none");
+    showPass.classList.add("d-none");
+  }
+}
+
+hidePass.addEventListener("click", hidePassword);
+showPass.addEventListener("click", hidePassword);
 
 signUpForm.onsubmit = (event) => {
   event.preventDefault();

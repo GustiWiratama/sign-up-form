@@ -80,10 +80,18 @@
 * body .main-container .main-section .input-form .email-section img,
 * body .main-container .main-section .input-form .password-section img {
   position: absolute;
-  left: 85%;
+  left: 86%;
   transform: translateY(62%);
   width: 24px;
   height: 24px;
+}
+* body .main-container .main-section .input-form .fn-section .hide-button,
+* body .main-container .main-section .input-form .ln-section .hide-button,
+* body .main-container .main-section .input-form .email-section .hide-button,
+* body .main-container .main-section .input-form .password-section .hide-button {
+  position: absolute;
+  left: 86%;
+  transform: translateY(62%);
 }
 * body .main-container .main-section .input-form input {
   display: flex;
