@@ -17,6 +17,7 @@ const imgError2 = document.querySelector("#error2");
 const imgError3 = document.querySelector("#error3");
 const imgError4 = document.querySelector("#error4");
 
+// const hideButton = document.querySelector("#hide-btn");
 const hidePass = document.querySelector("#hide-pass");
 const showPass = document.querySelector("#show-pass");
 
@@ -77,13 +78,14 @@ function validate() {
     passMessage.classList.add("text-danger");
     passMessage.innerHTML = "Password cannot be empty";
     imgError4.classList.remove("d-none");
-    hidePass.classList.add("d-none");
+    // hidePass.classList.add("d-none");
   } else {
     passMessage.classList.add("text-success");
     passMessage.classList.remove("text-danger");
     passMessage.innerHTML = "Success";
     imgError4.classList.add("d-none");
     hidePass.classList.remove("d-none");
+    // hideButton.style.setProperty("left", "86");
   }
 }
 

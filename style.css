@@ -27,10 +27,15 @@
 }
 * body .main-container .text-section {
   margin-top: 3em;
+  margin-right: 3em;
   justify-content: center;
   align-items: center;
-  max-width: 350px;
+  max-width: 497px;
   align-content: center;
+}
+* body .main-container .text-section .title {
+  font-weight: bold;
+  font-size: 3em;
 }
 * body .main-container .text-section .title-desc {
   font-size: 16px;
@@ -90,7 +95,7 @@
 * body .main-container .main-section .input-form .email-section .hide-button,
 * body .main-container .main-section .input-form .password-section .hide-button {
   position: absolute;
-  left: 86%;
+  left: 75%;
   transform: translateY(62%);
 }
 * body .main-container .main-section .input-form input {
@@ -125,15 +130,18 @@
 }
 
 @media screen and (max-width: 650px) {
-  .main-container {
+  body .main-container {
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
-  .text-section {
+  body .main-container .text-section {
     margin-top: 5em;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 2em;
+  }
+  body .main-container .text-section .title {
+    font-size: 2em;
   }
 }
 .text-danger {
