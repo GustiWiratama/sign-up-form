@@ -34,6 +34,11 @@ function validate() {
     fnMessage.classList.add("text-danger");
     fnMessage.innerHTML = "First name cannot be number or symbol";
     imgError1.classList.remove("d-none");
+  } else if (stringHaram.includes(firstNameInput.value.toLowerCase())) {
+    fnMessage.classList.remove("text-success");
+    fnMessage.classList.add("text-danger");
+    fnMessage.innerHTML = "First name cannot be typedata";
+    imgError1.classList.remove("d-none");
   } else {
     fnMessage.classList.add("text-success");
     fnMessage.classList.remove("text-danger");
@@ -50,6 +55,11 @@ function validate() {
     lnMessage.classList.add("text-danger");
     lnMessage.innerHTML = "Last name cannot be number or symbol";
     imgError2.classList.remove("d-none");
+  } else if (stringHaram.includes(lastNameInput.value.toLowerCase())) {
+    lnMessage.classList.remove("text-success");
+    lnMessage.classList.add("text-danger");
+    lnMessage.innerHTML = "Last name cannot be typedata";
+    imgError1.classList.remove("d-none");
   } else {
     lnMessage.classList.add("text-success");
     lnMessage.classList.remove("text-danger");
