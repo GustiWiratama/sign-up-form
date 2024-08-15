@@ -21,6 +21,8 @@ const imgError4 = document.querySelector("#error4");
 const hidePass = document.querySelector("#hide-pass");
 const showPass = document.querySelector("#show-pass");
 
+showPass.classList.remove("d-none");
+
 function validate() {
   if (firstNameInput.value.trim() === "") {
     fnMessage.classList.remove("text-success");
@@ -84,7 +86,7 @@ function validate() {
     passMessage.classList.remove("text-danger");
     passMessage.innerHTML = "Success";
     imgError4.classList.add("d-none");
-    hidePass.classList.remove("d-none");
+    showPass.classList.remove("d-none");
     // hideButton.style.setProperty("left", "86");
   }
 }
@@ -100,12 +102,13 @@ function validate() {
 function hidePassword() {
   if (password.type === "password") {
     password.type = "text";
-    hidePass.classList.add("d-none");
-    showPass.classList.remove("d-none");
-  } else {
-    password.type = "password";
     hidePass.classList.remove("d-none");
     showPass.classList.add("d-none");
+  } else {
+    password.type = "password";
+
+    hidePass.classList.add("d-none");
+    showPass.classList.remove("d-none");
   }
 }
 
